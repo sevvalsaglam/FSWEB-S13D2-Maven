@@ -16,6 +16,7 @@ public class Main {
         System.out.println(numberToWords(123));
         System.out.println(numberToWords(1010));
         System.out.println(numberToWords(-12));
+        
 
     }
      //Soru-1: isPalindrome
@@ -58,46 +59,48 @@ public class Main {
     public static String numberToWords(int number){
         if(number<0) return "Invalid Value";
         char[] numberChars = String.valueOf(number).toCharArray();
-        String numberString="";
+        StringBuilder numberString= new StringBuilder();
         for(char numberChar: numberChars){
             switch (numberChar){
                 case '0':
-                    numberString += "Zero ";
+                    numberString.append("Zero ");
                     break;
                 case '1':
-                    numberString += "One ";
+                    numberString.append("One ");
                     break;
                 case '2':
-                    numberString += "Two ";
+                    numberString.append("Two ");
                     break;
                 case '3':
-                    numberString += "Three ";
+                    numberString.append("Three ");
                     break;
                 case '4':
-                    numberString += "Four ";
+                    numberString.append("Four ");
                     break;
                 case '5':
-                    numberString += "Five ";
+                    numberString.append("Five ");
                     break;
                 case '6':
-                    numberString += "Six ";
+                    numberString.append("Six ");
                     break;
                 case '7':
-                    numberString += "Seven ";
+                    numberString.append("Seven ");
                     break;
                 case '8':
-                    numberString += "Eight ";
+                    numberString.append("Eight ");
                     break;
                 case '9':
-                    numberString += "Nine ";
+                    numberString.append("Nine ");
                     break;
             }
         }
-        return numberString.trim();
+        return numberString.toString().trim();
     }//***!! char tek tırnakla yazılır !!***
     //parametreyi char arrayine çeviriyorum ['3','7','9']
     //forEach döngüsüyle her karaktere bakıyorum
     //switch-case (if else kullanmıyorum çünkü koşul çok var)
     //koşulu sağlayan stringleri topluyorum
     //sonda ve başta boşluk olmaması için trim methodu kullanıyorum.
+
+
 }
